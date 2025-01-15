@@ -1,9 +1,168 @@
-*{
+* {
     box-sizing: border-box;
+    /* chiều cao va chiều rộng sẽ ko bị thay đối khi bị tác động bới padding và border*/
 }
-html{
+
+:root {
+    --color_primary: #1ebfc1;
+}
+
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    background-color: #FBF0FB;
 }
+
+.main-content{
+    width: 1260px;
+    max-width: calc(100% - 12%);
+    margin-right: auto;
+    margin-left: auto;
+}
+.container{
+    position: sticky;
+    top: 28px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+/* header */
+.header .body{
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px ;
+}
+.nav{
+    /* margin-left: auto; */
+    text-align: center;
+
+}
+.a{
+    text-decoration: none;
+}
+.nav ul{
+    display: flex;
+}
+.nav a{
+    color: #000;
+    font-size: 1.6rem;
+    padding: 12px 24px;
+}
+
+.nav a:hover{
+    color: #000;
+    /* font-weight: 600 ; */
+    text-shadow: 1px 0 0 currentColor;
+    
+}
+ 
+.body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+.nguoidung{
+    font-size: 1.6rem;
+    padding: 12px 24px;
+}
+/* hero */
+.hero {
+    width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    /* Căn đều phần nội dung và phần hình ảnh */
+    align-items: center;
+    /* Sử dụng flexbox để căn đều nội dung */
+
+}
+
+/* Điều chỉnh kích thước cho logo và ảnh bánh */
+.logo,
+.banh3lop {
+    width: 100px;
+    height: auto;
+    /* Giữ tỷ lệ khung hình */
+}
+
+.hero_media {
+    text-align: right;
+    margin-top: 20px;
+    /* Đảm bảo margin đúng định dạng */
+}
+
+/* Đảm bảo căn giữa nội dung */
+.hero_content {
+    text-align: center;
+   
+}
+.hero_media {
+    display: flex;
+        justify-content: space-between;
+        /* Đặt logo ở giữa và bánh sát lề phải */
+        align-items: center;
+        /* Căn giữa theo chiều dọc */
+        height: 200px ;
+        text-align: center;
+        
+}
+.hero_heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* Khoảng cách giữa logo và chữ */
+    font-size: 3rem;
+    /* Kích thước chữ */
+    font-weight: bold;
+    color: #000;
+    /* Màu chữ */
+    margin-bottom: 20px;
+    /* Khoảng cách dưới tiêu đề */
+}
+
+.hero_heading .logo-center {
+    width: 60px;
+    /* Kích thước logo */
+    height: auto;
+    margin: 0 10px;
+    /* Tạo thêm khoảng cách nếu cần */
+}
+
+/*  Căn giữa bảng */
+.center-table {
+    margin-left: auto;
+    margin-right: auto;
+    /* text-align: center; */
+    display: inline-block;
+    /* Để nội dung bên trong bảng cũng căn giữa */
+}
+table {
+    text-align: left;
+    /* Căn trái nội dung trong bảng */
+}
+.hero_a{
+    font-size: 20px;
+text-decoration: none;
+color: #000;
+text-align: left;
+}
+/* căn phải hình ảnh  */
+.hero_img{
+    max-width: 700px ;
+}
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(219, 205, 203);
+    
+}
+
