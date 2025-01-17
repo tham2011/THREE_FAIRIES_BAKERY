@@ -1,168 +1,309 @@
-* {
-    box-sizing: border-box;
-    /* chiều cao va chiều rộng sẽ ko bị thay đối khi bị tác động bới padding và border*/
-}
-
-:root {
-    --color_primary: #1ebfc1;
-}
-
-html {
-    font-size: 62.5%;
-}
-
+/* General Styles */
 body {
-    font-size: 1.6rem;
-    font-family: "Poppins", sans-serif;
+    font-family: Arial, "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #FBF0FB;
+    color: #333;
 }
 
-.main-content{
-    width: 1260px;
-    max-width: calc(100% - 12%);
-    margin-right: auto;
-    margin-left: auto;
-}
-.container{
-    position: sticky;
-    top: 28px;
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-}
-/* header */
-.header .body{
-    display: flex;
-    align-items: center;
-    padding: 36px 0 8px ;
-}
-.nav{
-    /* margin-left: auto; */
-    text-align: center;
-
-}
-.a{
+a {
     text-decoration: none;
-}
-.nav ul{
-    display: flex;
-}
-.nav a{
-    color: #000;
-    font-size: 1.6rem;
-    padding: 12px 24px;
+    color: inherit;
 }
 
-.nav a:hover{
-    color: #000;
-    /* font-weight: 600 ; */
-    text-shadow: 1px 0 0 currentColor;
-    
-}
- 
-.body{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-}
-.nguoidung{
-    font-size: 1.6rem;
-    padding: 12px 24px;
-}
-/* hero */
-.hero {
-    width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    justify-content: space-between;
-    /* Căn đều phần nội dung và phần hình ảnh */
-    align-items: center;
-    /* Sử dụng flexbox để căn đều nội dung */
-
-}
-
-/* Điều chỉnh kích thước cho logo và ảnh bánh */
-.logo,
-.banh3lop {
-    width: 100px;
+img {
+    max-width: 100%;
     height: auto;
-    /* Giữ tỷ lệ khung hình */
 }
 
-.hero_media {
-    text-align: right;
-    margin-top: 20px;
-    /* Đảm bảo margin đúng định dạng */
-}
-
-/* Đảm bảo căn giữa nội dung */
-.hero_content {
-    text-align: center;
-   
-}
-.hero_media {
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
     display: flex;
-        justify-content: space-between;
-        /* Đặt logo ở giữa và bánh sát lề phải */
-        align-items: center;
-        /* Căn giữa theo chiều dọc */
-        height: 200px ;
-        text-align: center;
-        
+    flex-direction: column;
+    align-items: center;
 }
-.hero_heading {
+
+/* Header Styles */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logoimg {
+    max-width: 120px;
+}
+
+.nav {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    /* Khoảng cách giữa logo và chữ */
-    font-size: 3rem;
-    /* Kích thước chữ */
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.nav-link {
+    font-size: 1.4rem;
     font-weight: bold;
-    color: #000;
-    /* Màu chữ */
+    color: black !important;
+}
+
+.nav-link:hover {
+    color: #f68b1f;
+}
+
+.user-cart .icon {
+    width: 24px;
+    margin-left: 15px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #fff;
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.5;
     margin-bottom: 20px;
-    /* Khoảng cách dưới tiêu đề */
 }
 
-.hero_heading .logo-center {
-    width: 60px;
-    /* Kích thước logo */
-    height: auto;
-    margin: 0 10px;
-    /* Tạo thêm khoảng cách nếu cần */
+.hero h1 span {
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: #555;
 }
 
-/*  Căn giữa bảng */
-.center-table {
-    margin-left: auto;
-    margin-right: auto;
-    /* text-align: center; */
-    display: inline-block;
-    /* Để nội dung bên trong bảng cũng căn giữa */
-}
-table {
-    text-align: left;
-    /* Căn trái nội dung trong bảng */
-}
-.hero_a{
-    font-size: 20px;
-text-decoration: none;
-color: #000;
-text-align: left;
-}
-/* căn phải hình ảnh  */
-.hero_img{
-    max-width: 700px ;
-}
-#hero{
+.hero-info {
+    margin-top: 20px;
+    gap: 50px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(219, 205, 203);
-    
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+.contact-item {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.contact-item img {
+    width: 24px;
+    margin-bottom: 10px;
+}
+
+.hero-image {
+    margin-top: 40px;
+}
+
+.cake-image {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fdf6f8;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-text {
+    max-width: 60%;
+    font-family: "Dancing Script", cursive;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #555;
+    text-align: center;
+}
+
+.about-text b {
+    font-size: 2rem;
+    color: #1ebfc1;
+}
+
+.about-image {
+    max-width: 35%;
+}
+
+.about-image img {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Section */
+.product-section {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.btn-outline-dark {
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+/* Additional Styles */
+.product-section h2 {
+    font-size: 2.4rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.card .btn-outline-dark:hover {
+    background-color: #f68b1f;
+    color: white;
+    border-color: #f68b1f;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #f68b1f;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* News Section */
+.news-section {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1 1 23%; /* Chiều rộng bằng nhau cho các ô */
+    max-width: 23%;
+    display: flex;
+    justify-content: center;
+}
+
+.cake-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.cake-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Style trong Tin tức nổi bật */
+.cake-card .logo {
+    width: 30px; /* Thu nhỏ kích thước logo */
+    position: absolute; /* Đảm bảo logo được định vị chính xác */
+    top: 10px; /* Đặt logo lên phía trên */
+    right: 10px; /* Đưa logo về phía bên phải */
+}
+
+/* Thêm style cho cake-card để đảm bảo logo không bị cản trở bởi các phần tử khác */
+.cake-card {
+    position: relative; /* Để logo có thể được định vị tuyệt đối trong cake-card */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.cake-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cake-card .cake-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cake-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cake-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
